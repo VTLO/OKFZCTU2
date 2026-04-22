@@ -1,0 +1,15 @@
+version: '3.8'
+
+services:
+  frenchinvoice-community:
+    build: .
+    container_name: frenchinvoice-community
+    ports:
+      - "5555:8080"
+    volumes:
+      - community-data:/app/Data
+    environment:
+      - ASPNETCORE_ENVIRONMENT=Production
+
+volumes:
+  community-data:
